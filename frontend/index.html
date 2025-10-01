@@ -1,0 +1,10 @@
+<button onclick="startLab('linux')">Start Linux Lab</button>
+
+<script>
+async function startLab(lab) {
+  await fetch(`http://localhost:8000/start-lab/${lab}?duration=60`, {
+    method: "POST"
+  });
+  alert(`${lab} lab started!`);
+}
+</script>
